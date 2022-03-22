@@ -7,13 +7,11 @@ req2.open("GET",`https://api.covid19api.com/country/india/status/confirmed?from=
 req2.send()
 
 let month=JSON.parse(req2.response)
-console.log(month)
 let cases=[], dates=[]
 for (let i=0; i<month.length; i++){
     cases.push(month[i].Cases)
     dates.push(month[i].Date.slice(0,-10))
 }
-console.log(cases,dates)
 
 const labels = dates
 
