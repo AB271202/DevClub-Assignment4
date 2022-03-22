@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box; 
+}
+body{
+    margin:auto;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.25em;
+}
+h1,h2,h3,th{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    text-align: center;
+}
+h1{
+    font-size: 5em;
+}
+h2{
+    font-size: 3em;
+}
+header{
+    background-image: url("corona back 2.jpg");
+    background-attachment: fixed; 
+    background-position:left bottom;
+    background-size: cover;
+    color:aliceblue;
+    padding:2%;
+    height:100%;
+    width:fill-parent;
+    text-shadow: 2px 2px 15px black;
+}
+header h2,h1{
+    text-align: left;
+}
+header h2{
+    color:rgb(240, 240, 98)
+}
+nav{
+    position: sticky;
+    top: 0;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    width:100%;
+    background-color: rgb(32, 1, 1);
+    font-size: 1.5em;
+}
+nav li{
+    display: inline-block;
+    padding:0.5em;
+    margin: 0;
+}
+nav a{
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    color:whitesmoke;
+    
+}
+nav a:hover{
+    background-color: whitesmoke;
+    color:rgb(32, 1, 1);
+    margin: 0;
+}
+#tips ul{
+    list-style-type: none;
+}
+#tips li{
+    border:10px solid rgb(2, 2, 39);
+    border-radius: 1em;
+    margin:2em;
+    padding: 70px 0;
+    text-align: center;
+    font-size: 2em;
+}
+img{
+    height: 25%;
+    width:25%;
+}
+table{
+    padding:1em;
+    margin:auto;
+    border-collapse: collapse;
+    border: 5px solid #00291a ;
+}
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+  }
+
+tr:hover {background-color: white;}
+  
+th {
+    background-color: #00291a;
+    color: white;
+  }
+#Cases{
+    display: grid;
+    border:5px solid black;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+}
+#Cases div{
+    padding: 20px;
+    text-align: center;
+}
+.ques{
+    border:0.5em solid rgb(43, 1, 1);
+    border-radius: 1em;
+    margin:2em;
+    padding: 1em;
+    text-align: center;
+}
+#symp{ 
+    padding:5%;
+    padding-top:5px;
+    background-color: #ddd;}
+#yt{
+    background-color: #ddd;
+    text-align: center;
+    padding:10%;
+}
+#yt img{
+    height:50%;
+    width: 50%;
+}
+footer{
+    background-color:rgb(2, 2, 39) ;
+    text-align: center;
+    font-size: 0.75em;
+    color:white;
+    padding:1em;
+}

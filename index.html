@@ -1,12 +1,140 @@
+<!--To get a basic html document, save its type as html and press !+tab-->
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="index.css">
+    <link rel="favicon" href="covidicon.png">
+	<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Varela+Round&display=swap" rel="stylesheet">
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<!-- AOS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<title>Covid Charts</title>
 </head>
 <body>
+	<header>
+		<h2>Confused about where to get the right information about COVID-19?</h2>
+		<h1>Don't worry, we got you!</h1>
+	</header>
+	<nav class="materialize-red darker-5">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#tips">Tips</a></li>
+			<li><a href="#syp">Symptoms</a></li>
+			<li><a href="#cases">Cases&Chart</a></li>
+			<li><a href="#faq">FAQs</a></li>
+			<li><a href="#yt">Youtube</a></li>
+		</ul>
+	</nav>
+	<div id=tips>
+		<a name="tips"></a>
+		<h2>Tips</h2>
+		<ul>
+			<li>Wear mask <img src="FFP2 Face mask-amico 1.png"></li>
+			<li>Use sanitizer <img src="Handwashing-amico 1.png"></li>
+		</ul>
+	</div>
+	<div id="symp">
+		<a name="syp"></a>
+	   <h2>Symptoms</h2> 
+	   <table>
+		   <thead>
+				<th>Symptom</th> 
+				<th>Severity</th>
+				 <th>Advice</th>
+			</thead>
+			<tr>
+				<td>Fever</td>
+				<td>Mild</td>
+				<td>Drink plenty of fluids, particularly water.</td>
+			</tr>
+			<tr>
+				<td>Cold </td>
+				<td>Mild </td>
+				<td>Drink plenty of fluids, particularly water.</td>
+			</tr>
+			<tr>
+				<td>Cough</td>
+				<td>Mild</td>
+				<td>Drink plenty of fluids, particularly water.</td>
+			</tr>
+			<tr>
+				<td>Tiredness</td>
+				<td>Mild</td>
+				<td>Drink plenty of fluids, particularly water.</td>
+			</tr>
+	   </table> 
+	</div>
+	<a name="cases"></a>
+	<h2>Cases</h2>
+	<div id="Cases">
+		<div style="background-color:red; color:white">
+			<span id="gtc"></span><br> Total cases Globally
+		</div>
+		<div style="background-color:yellow; color:black">
+			<span id="gnc"></span><br> New cases Globally 
+		</div>
+		<div style="background-color:blue; color:white">
+			<span id="itc"></span><br> Total cases in India 
+		</div>
+		<div style="background-color:green; color:black">
+			<span id="inc"></span><br> New cases in India 
+		</div>
+	</div>
+	<hr width="75%">
+	<div>
+		<canvas id="myChart"></canvas>
+	</div>
+	  
+	<div>
+		<a name="faq"></a>
+		<h2>FAQs</h2>
+		<div class=ques>
+			<h3>What is COVID-19?</h3>
+			COVID-19 is a disease caused by a virus called SARS-CoV-2. Most people with COVID-19 have mild symptoms, but some people can become severely ill. Although most people with COVID-19 get better within weeks of illness, some people experience post-COVID conditions. Post-COVID conditions are a wide range of new, returning, or ongoing health problems people can experience more than four weeks after first being infected with the virus that causes COVID-19. Older people and those who have certain underlying medical conditions are more likely to get severely ill from COVID-19. Vaccines against COVID-19 are safe and effective.
+		</div>
+		<div class=ques>
+			<h3>Should I use soap and water or hand sanitizer to protect myself?</h3>
+			Handwashing is one of the best ways to protect yourself and your family from getting sick. Wash your hands often with soap and water for at least 20 seconds, especially after blowing your nose, coughing, or sneezing; going to the bathroom; and before eating or preparing food. If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol.
+		</div>
+		<div class=ques>
+			<h3>What are the symptoms and complications that COVID-19 can cause?</h3>
+			People with COVID-19 have reported a wide range of symptoms – from mild symptoms to severe illness. Symptoms may appear 2-14 days after exposure to the virus. If you have fever, cough, or other symptoms, you might have COVID-19.
+		</div>
+	</div>
+	<div id=yt>
+		<a name="yt" href="https://www.youtube.com/watch?v=qHksVwOrpbE&list=PL9S6xGsoqIBU2V6AZYGlJwZRAFJ3YDreb">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/qHksVwOrpbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<br> Watch a Video!</a>
+	</div>
+	<footer>
+		&copy; Anish Banerjee <br>
+		<a href="mailto:ee1210134@iitd.ac.in" class="btn"><i class="material-icons left">mail</i>Mail me!</a>
+		
+
+	</footer>
+
+	<p id="demo"></p>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@3/dist/chart.min.js"></script>
 	<script src="script.js"></script>
+	<script src="script2.js"></script>
+	<script>
+		const myChart = new Chart(
+		  document.getElementById('myChart'),
+		  config
+		);
+	</script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
+<!--to get a div of class 'container' just type 'div.container' and press tab
+similarly for id div#container-->
