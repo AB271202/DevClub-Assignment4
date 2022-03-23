@@ -21,5 +21,5 @@ Now, build a chrome extension which will solve this question automatically!
 * Using DOM selector you can change the style of the elements. So now, try to redesign moodle according to your own creativity! For instance, try making a dark-mode for moodle!
 
 ## My Submission
-Here is a gif showing the working of my script!
+Here is a gif showing the working of my script!<br />
 ![gif](./Moodle+.gif)
