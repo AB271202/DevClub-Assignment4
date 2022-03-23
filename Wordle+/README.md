@@ -29,9 +29,9 @@ Example: If the user makes a `GET` request `http://localhost:8080/wordle?q=CRANE
 
 ### MY Submission
 Here is are two screenshots of the working: <br />
-![ss1](ss1.jpg)
-![ss2](ss2.jpg)
+![ss1](ss1.png)
+![ss2](ss2.png)
 <br />
 And here is a screenshot of implementation using ngrok:<br />
-![ngrok](ngrok.jpg)
+![ngrok](ngrok.png)
 
