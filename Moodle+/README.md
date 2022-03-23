@@ -22,4 +22,4 @@ Now, build a chrome extension which will solve this question automatically!
 
 ## My Submission
 Here is a gif showing the working of my script!
-![gif](link)
+![gif](./Moodle+.gif)
